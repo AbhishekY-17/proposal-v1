@@ -30,6 +30,7 @@
     body {
 
       min-height: 100vh;
+      min-height: 100dvh;
 
       font-family:
         -apple-system,
@@ -51,9 +52,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        PAGES
-    ========================= */
+    ================================== */
 
     .page {
 
@@ -109,7 +110,8 @@
 
       border-radius: 30px;
 
-      padding: 40px 28px;
+      padding:
+        40px 28px;
 
       box-shadow:
         0 15px 50px
@@ -117,9 +119,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        TEXT
-    ========================= */
+    ================================== */
 
     h1 {
 
@@ -179,9 +181,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        GENERAL BUTTONS
-    ========================= */
+    ================================== */
 
     .button {
 
@@ -227,15 +229,15 @@
     }
 
 
-    /* =========================
+    /* ==================================
        PROPOSAL AREA
-    ========================= */
+    ================================== */
 
     .proposal-area {
 
       width: 100%;
 
-      height: 360px;
+      height: 390px;
 
       position: relative;
 
@@ -245,15 +247,15 @@
     }
 
 
-    /* =========================
+    /* ==================================
        YES BUTTON
-    ========================= */
+    ================================== */
 
     .yes-btn {
 
       position: absolute;
 
-      left: 50%;
+      left: 32%;
       top: 50%;
 
       transform:
@@ -292,15 +294,15 @@
     }
 
 
-    /* =========================
+    /* ==================================
        NO BUTTON
-    ========================= */
+    ================================== */
 
     .no-btn {
 
       position: absolute;
 
-      left: 75%;
+      left: 78%;
       top: 50%;
 
       transform:
@@ -358,9 +360,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        COPY MESSAGE
-    ========================= */
+    ================================== */
 
     .copy-box {
 
@@ -421,9 +423,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        FLOATING HEARTS
-    ========================= */
+    ================================== */
 
     .floating-heart {
 
@@ -444,9 +446,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        CONFETTI
-    ========================= */
+    ================================== */
 
     .confetti {
 
@@ -467,9 +469,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        ANIMATIONS
-    ========================= */
+    ================================== */
 
     @keyframes fadeIn {
 
@@ -534,9 +536,9 @@
     }
 
 
-    /* =========================
+    /* ==================================
        MOBILE
-    ========================= */
+    ================================== */
 
     @media (max-width: 480px) {
 
@@ -556,11 +558,13 @@
 
       .proposal-area {
 
-        height: 380px;
+        height: 400px;
       }
 
 
       .yes-btn {
+
+        left: 30%;
 
         padding:
           17px 28px;
@@ -571,6 +575,8 @@
 
 
       .no-btn {
+
+        left: 80%;
 
         width: 115px;
 
@@ -680,8 +686,8 @@
 
       <p>
 
-        Somewhere between the flirting,<br>
-        the roasting,<br>
+        Somewhere between the flirting,
+        the roasting,
         and the absolutely questionable
         conversations...
 
@@ -740,45 +746,50 @@
 
       <p>
 
-        I really like how you are.
+        You're genuinely one of the
+        funniest people I've met. 😭
 
       </p>
 
       <p>
 
-        You're funny,<br>
-        you're goofy,<br>
-        you're ridiculously good at roasting me... 😭
+        You're goofy,
+        ridiculously good at roasting me,
+        and somehow your flirting is
+        both cute and terrible. 🫣
 
       </p>
 
       <p>
 
-        You can yap for hours,
-        and somehow I still want to hear more. 🫣
+        I've always loved all the
+        conversations we have. ❤️
 
       </p>
 
       <p>
 
-        I love your energy,
-        your sarcasm,
-        and the way you somehow
-        make even the most random
-        conversations fun.
+        Even the completely random ones.
+        Even the stupid ones.
+        Especially the ones where we're
+        just annoying each other.
 
       </p>
 
       <p>
 
-        And honestly...
+        And those cat-like eyes of yours...
+
+        <br>
+
+        Yeah, those don't exactly help
+        my situation either. 👀
 
       </p>
 
       <h2>
 
-        I really like having you
-        in my life. ❤️
+        I really, really like you. ❤️
 
       </h2>
 
@@ -826,23 +837,38 @@
 
       <p>
 
-        And I've wanted to ask you
-        this properly for a while.
+        And honestly...
+
+        <br>
+
+        <strong>
+          I'd hate to lose you to someone else. ❤️
+        </strong>
 
       </p>
 
       <p>
 
-        No dare.<br>
-        No game.<br>
-        No "I love you because
-        I lost a challenge." 😭
+        So I figured I should stop being
+        a coward and ask you properly. 🫣
 
       </p>
 
       <p>
 
-        Just me asking you.
+        No dare.
+        <br>
+        No game.
+        <br>
+        No "I love you because I lost a challenge." 😭
+
+      </p>
+
+      <p>
+
+        Just me.
+        <br>
+        Asking you.
 
       </p>
 
@@ -1087,6 +1113,7 @@
 
 
       createHearts(3);
+
     }
 
 
@@ -1116,35 +1143,34 @@
 
       "At this point you're just flirting with me. 👀",
 
-      "Fine. You get one option now. 😌❤️"
+      "Okay fine... I guess you only have one option now. 😌❤️"
 
     ];
 
 
     /*
-     * Safe positions for the NO button.
+     * These positions deliberately keep
+     * NO around the edges of the screen.
      *
-     * These are deliberately around the
-     * edges of the proposal area so that
-     * the growing YES button doesn't
-     * swallow it.
+     * This prevents it from sitting on
+     * top of the growing YES button.
      */
 
     const noPositions = [
 
-      { left: "78%", top: "18%" },
+      { left: "82%", top: "18%" },
 
-      { left: "22%", top: "20%" },
+      { left: "18%", top: "18%" },
 
-      { left: "78%", top: "82%" },
+      { left: "82%", top: "82%" },
 
-      { left: "20%", top: "82%" },
+      { left: "18%", top: "82%" },
 
-      { left: "82%", top: "42%" },
+      { left: "88%", top: "50%" },
 
-      { left: "18%", top: "48%" },
+      { left: "12%", top: "50%" },
 
-      { left: "78%", top: "70%" }
+      { left: "80%", top: "25%" }
 
     ];
 
@@ -1192,13 +1218,12 @@
          GROW YES
       ------------------------------ */
 
-      yesScale += 0.22;
+      yesScale += 0.20;
 
 
       yesBtn.style.transform =
         `translate(-50%, -50%)
          scale(${yesScale})`;
-
 
 
       /* ------------------------------
@@ -1228,7 +1253,6 @@
       }
 
 
-
       /* ------------------------------
          REMOVE NO
       ------------------------------ */
@@ -1245,7 +1269,7 @@
           "Okay fine... I guess you only have one option now. 😌❤️";
 
 
-        yesScale = 2.8;
+        yesScale = 2.5;
 
 
         yesBtn.style.transform =
