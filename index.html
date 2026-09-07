@@ -1,38 +1,62 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
 
   <title>For Prisha ❤️</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       min-height: 100vh;
-      min-height: 100dvh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fff7fa);
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff0f5,
+          #ffe4ec,
+          #fff7fa
+        );
+
       color: #4a2733;
-      overflow: hidden;
-      -webkit-tap-highlight-color: transparent;
+
+      overflow-x: hidden;
     }
+
+    /* =========================
+       PAGES
+    ========================= */
 
     .page {
       display: none;
+
+      width: 100%;
       min-height: 100vh;
       min-height: 100dvh;
-      width: 100%;
-      padding: 30px 20px;
+
+      padding: 70px 20px 50px;
+
       align-items: center;
       justify-content: center;
+
       text-align: center;
+
       position: relative;
     }
 
@@ -47,46 +71,92 @@
       z-index: 2;
     }
 
+    .card {
+      background: rgba(255, 255, 255, 0.78);
+
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(255, 255, 255, 0.9);
+
+      border-radius: 30px;
+
+      padding: 40px 28px;
+
+      box-shadow:
+        0 15px 50px rgba(120, 50, 70, 0.12);
+    }
+
+    /* =========================
+       TEXT
+    ========================= */
+
     h1 {
-      font-size: clamp(2rem, 9vw, 4rem);
-      line-height: 1.15;
-      margin-bottom: 20px;
+      font-size: clamp(2.2rem, 9vw, 4rem);
+
+      line-height: 1.12;
+
+      margin-bottom: 22px;
+
       color: #b83b5e;
     }
 
     h2 {
-      font-size: clamp(1.7rem, 7vw, 3rem);
+      font-size: clamp(1.8rem, 7vw, 3rem);
+
       line-height: 1.2;
-      margin-bottom: 20px;
+
+      margin-bottom: 24px;
+
       color: #b83b5e;
     }
 
     p {
       font-size: clamp(1rem, 4.5vw, 1.3rem);
+
       line-height: 1.7;
-      margin: 12px 0;
+
+      margin: 14px 0;
     }
 
     .small {
       font-size: 0.95rem;
+
       opacity: 0.75;
+
+      line-height: 1.6;
     }
 
     .emoji {
       font-size: 4rem;
-      margin-bottom: 20px;
+
+      margin-bottom: 22px;
+
       animation: float 3s ease-in-out infinite;
     }
 
+    /* =========================
+       GENERAL BUTTON
+    ========================= */
+
     .button {
       border: none;
+
       border-radius: 50px;
+
       padding: 15px 30px;
+
       font-size: 1.05rem;
+
       font-weight: 700;
+
       cursor: pointer;
-      margin: 12px 6px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      margin: 15px 6px;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
       touch-action: manipulation;
     }
 
@@ -96,220 +166,392 @@
 
     .primary {
       background: #d94f70;
+
       color: white;
-      box-shadow: 0 8px 25px rgba(217, 79, 112, 0.3);
+
+      box-shadow:
+        0 8px 25px rgba(217, 79, 112, 0.3);
     }
 
-    .secondary {
-      background: white;
-      color: #b83b5e;
-      border: 2px solid #f0b5c5;
-    }
-
-    .next {
-      margin-top: 30px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.8);
-      border-radius: 28px;
-      padding: 35px 25px;
-      box-shadow: 0 15px 50px rgba(120, 50, 70, 0.12);
-    }
-
-    .heart {
-      color: #e75480;
-    }
-
-    /* Proposal buttons */
+    /* =========================
+       PROPOSAL
+    ========================= */
 
     .proposal-area {
-      margin-top: 35px;
-      min-height: 220px;
+
+      width: 100%;
+
+      height: 330px;
+
       position: relative;
+
+      margin-top: 25px;
+
       display: flex;
-      justify-content: center;
+
       align-items: center;
-      gap: 18px;
+
+      justify-content: center;
     }
 
     .yes-btn,
     .no-btn {
+
       border: none;
+
       border-radius: 50px;
-      padding: 16px 28px;
-      font-size: 1.05rem;
+
+      font-size: 1.1rem;
+
       font-weight: 800;
+
       cursor: pointer;
+
       touch-action: manipulation;
-      transition: all 0.35s ease;
-      position: relative;
-      z-index: 5;
+
+      position: absolute;
+
+      transition:
+        transform 0.35s ease,
+        left 0.35s ease,
+        top 0.35s ease,
+        opacity 0.35s ease;
     }
 
     .yes-btn {
+
       background: #d94f70;
+
       color: white;
-      box-shadow: 0 10px 30px rgba(217, 79, 112, 0.3);
+
+      padding: 18px 32px;
+
+      left: 28%;
+
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%)
+        scale(1);
+
+      box-shadow:
+        0 10px 30px rgba(217, 79, 112, 0.3);
+
+      z-index: 5;
     }
 
     .no-btn {
+
       background: white;
+
       color: #555;
+
       border: 2px solid #ddd;
+
+      padding: 16px 28px;
+
+      left: 72%;
+
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      z-index: 10;
     }
 
     .message {
-      min-height: 35px;
-      margin-top: 15px;
-      font-weight: 600;
+
+      min-height: 40px;
+
+      margin-top: 5px;
+
+      font-weight: 700;
+
       color: #b83b5e;
+
       font-size: 1.05rem;
     }
 
-    /* Final message */
+    /* =========================
+       COPY MESSAGE
+    ========================= */
 
     .copy-box {
+
       margin: 25px auto;
+
       max-width: 500px;
+
       background: white;
+
       border: 2px dashed #e9a6b8;
+
       border-radius: 18px;
+
       padding: 20px;
+
       font-size: 1.15rem;
+
       font-weight: 700;
+
       color: #b83b5e;
     }
 
     .copy-button {
+
       background: #d94f70;
+
       color: white;
+
       border: none;
+
       border-radius: 50px;
+
       padding: 14px 25px;
+
       font-size: 1rem;
+
       font-weight: 700;
+
       cursor: pointer;
+
+      touch-action: manipulation;
+
     }
 
     .copied {
+
       margin-top: 15px;
+
       color: #b83b5e;
+
       font-weight: 700;
+
       min-height: 25px;
     }
 
-    /* Floating hearts */
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
 
     .floating-heart {
+
       position: fixed;
+
       bottom: -30px;
+
       font-size: 20px;
+
       pointer-events: none;
+
       animation: rise linear forwards;
+
       opacity: 0.7;
+
       z-index: 1;
     }
 
-    /* Confetti */
+    /* =========================
+       CONFETTI
+    ========================= */
 
     .confetti {
+
       position: fixed;
+
       width: 9px;
+
       height: 9px;
+
       top: -15px;
+
       z-index: 100;
+
       pointer-events: none;
-      animation: confettiFall 3s linear forwards;
+
+      animation:
+        confettiFall 3s linear forwards;
     }
 
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
     @keyframes fadeIn {
+
       from {
         opacity: 0;
-        transform: translateY(15px);
+
+        transform:
+          translateY(18px);
       }
+
       to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
+
+      0%,
+      100% {
+        transform:
+          translateY(0);
       }
+
       50% {
-        transform: translateY(-10px);
+        transform:
+          translateY(-10px);
       }
     }
 
     @keyframes rise {
+
       to {
-        transform: translateY(-110vh) rotate(20deg);
+
+        transform:
+          translateY(-110vh)
+          rotate(20deg);
+
         opacity: 0;
       }
     }
 
     @keyframes confettiFall {
+
       to {
-        transform: translateY(110vh) rotate(720deg);
+
+        transform:
+          translateY(110vh)
+          rotate(720deg);
+
         opacity: 0;
       }
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 480px) {
+
+      .page {
+
+        padding:
+          60px 18px 45px;
+      }
+
       .card {
-        padding: 28px 18px;
+
+        padding:
+          32px 20px;
       }
 
       .proposal-area {
-        gap: 10px;
+
+        height: 360px;
       }
 
-      .yes-btn,
+      .yes-btn {
+
+        left: 35%;
+
+        padding:
+          16px 27px;
+      }
+
       .no-btn {
-        padding: 14px 22px;
-        font-size: 0.95rem;
+
+        left: 72%;
+
+        padding:
+          14px 24px;
+      }
+
+      p {
+
+        line-height: 1.65;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- PAGE 1 -->
-  <section class="page active" id="page1">
+
+  <!-- =========================
+       PAGE 1
+  ========================= -->
+
+  <section
+    class="page active"
+    id="page1"
+  >
+
     <div class="content">
-      <div class="emoji">💌</div>
 
-      <h1>Hey, Prisha 👀</h1>
+      <div class="emoji">
+        💌
+      </div>
 
-      <p>I made something for you.</p>
+      <h1>
+        Hey, Prisha 👀
+      </h1>
 
-      <p class="small">
-        And before you ask...<br>
-        No, you can't make fun of me for this. 🫣
+      <p>
+        I made something for you.
       </p>
 
-      <button class="button primary next" onclick="nextPage()">
+      <p class="small">
+
+        And before you ask...<br>
+
+        No, you can't make fun of me for this. 🫣
+
+      </p>
+
+      <button
+        class="button primary"
+        onclick="nextPage()"
+      >
         Okay, show me → ❤️
       </button>
+
     </div>
+
   </section>
 
 
-  <!-- PAGE 2 -->
-  <section class="page" id="page2">
+
+  <!-- =========================
+       PAGE 2
+  ========================= -->
+
+  <section
+    class="page"
+    id="page2"
+  >
+
     <div class="content card">
 
-      <div class="emoji">🎮</div>
+      <div class="emoji">
+        🎮
+      </div>
 
-      <h2>So... how did we get here?</h2>
+      <h2>
+        So... how did we get here?
+      </h2>
 
       <p>
-        We met while randomly playing a game.
+        We met while randomly playing
+        <strong>BGMI</strong>
+        on a random evening.
       </p>
 
       <p>
@@ -318,398 +560,795 @@
       </p>
 
       <p>
+
         Somewhere between the flirting,<br>
         the roasting,<br>
-        and the absolutely questionable conversations...
+        and the absolutely questionable
+        conversations...
+
       </p>
 
       <p>
-        <strong>I started liking you. ❤️</strong>
+
+        <strong>
+          I started liking you. ❤️
+        </strong>
+
       </p>
 
       <p class="small">
-        Yes, Popat, I'm actually being serious for once. 🦜
+
+        Yes, Popat, I'm being serious
+        as I've always been with the
+        previous "accidental" confessions. 🦜
+
       </p>
 
-      <button class="button primary next" onclick="nextPage()">
+      <button
+        class="button primary"
+        onclick="nextPage()"
+      >
         Continue 🫣
       </button>
 
     </div>
+
   </section>
 
 
-  <!-- PAGE 3 -->
-  <section class="page" id="page3">
+
+  <!-- =========================
+       PAGE 3
+  ========================= -->
+
+  <section
+    class="page"
+    id="page3"
+  >
+
     <div class="content card">
 
-      <div class="emoji">😭</div>
+      <div class="emoji">
+        😭
+      </div>
 
-      <h2>And honestly...</h2>
+      <h2>
+        And honestly....
+      </h2>
 
       <p>
-        I survived your roasting.
+
+        I survived your roasting😭.
+
       </p>
 
       <p>
-        Your questionable college choice.
+
+        Blessing you with my divine
+        presence daily😇.
+
       </p>
 
       <p>
-        And your suspiciously large population
-        of creepy guys at college. 💀
-      </p>
 
-      <p>
         So clearly...
+
       </p>
 
-      <h2>I deserve something in return. 😌</h2>
+      <h2>
+
+        I deserve something in return. 😌
+
+      </h2>
 
       <p class="small">
-        Also, being called "Dudh Wale" for being a Yadav
-        is still criminal btw. 😭
+
+        Also, being called "Dudh Wale"
+        for being a Yadav is still criminal btw. 😭
+
       </p>
 
-      <button class="button primary next" onclick="nextPage()">
+      <button
+        class="button primary"
+        onclick="nextPage()"
+      >
         Okay... 👀
       </button>
 
     </div>
+
   </section>
 
 
-  <!-- PAGE 4 -->
-  <section class="page" id="page4">
+
+  <!-- =========================
+       PAGE 4
+  ========================= -->
+
+  <section
+    class="page"
+    id="page4"
+  >
+
     <div class="content card">
 
-      <div class="emoji">❤️</div>
+      <div class="emoji">
+        ❤️
+      </div>
 
       <p>
         Jokes aside...
       </p>
 
       <p>
-        You've become someone I genuinely care about.
+        You've become someone
+        I genuinely care about.
       </p>
 
       <p>
-        And I've wanted to ask you this properly for a while.
+        And I've wanted to ask you
+        this properly for a while.
       </p>
 
       <p>
+
         No dare.<br>
         No game.<br>
-        No "I love you because I lost a challenge." 😭
+        No "I love you because
+        I lost a challenge." 😭
+
       </p>
 
       <p>
         Just me asking you.
       </p>
 
-      <button class="button primary next" onclick="nextPage()">
+      <button
+        class="button primary"
+        onclick="nextPage()"
+      >
         One last question... 🫣
       </button>
 
     </div>
+
   </section>
 
 
-  <!-- PAGE 5 - PROPOSAL -->
-  <section class="page" id="page5">
+
+  <!-- =========================
+       PAGE 5
+       PROPOSAL
+  ========================= -->
+
+  <section
+    class="page"
+    id="page5"
+  >
+
     <div class="content">
 
-      <div class="emoji">❤️</div>
+      <div class="emoji">
+        ❤️
+      </div>
 
-      <p>Prisha,</p>
+      <p>
+        Prisha,
+      </p>
 
-      <h1>Will you be my girlfriend?</h1>
+      <h1>
+        Will you be my girlfriend?
+      </h1>
 
-      <div class="proposal-area">
+
+      <div
+        class="proposal-area"
+        id="proposalArea"
+      >
 
         <button
           class="yes-btn"
           id="yesBtn"
-          onclick="sayYes()">
+          onclick="sayYes()"
+        >
           YES 🥰
         </button>
+
 
         <button
           class="no-btn"
           id="noBtn"
-          onclick="sayNo()">
+          onclick="sayNo()"
+        >
           NO 🙄
         </button>
 
       </div>
 
-      <div class="message" id="message"></div>
+
+      <div
+        class="message"
+        id="message"
+      ></div>
 
     </div>
+
   </section>
 
 
-  <!-- PAGE 6 - YES -->
-  <section class="page" id="page6">
+
+  <!-- =========================
+       PAGE 6
+       YES
+  ========================= -->
+
+  <section
+    class="page"
+    id="page6"
+  >
+
     <div class="content card">
 
-      <div class="emoji">🎉💗</div>
+      <div class="emoji">
+        🎉💗
+      </div>
 
-      <h1>I KNEW IT 😭❤️</h1>
+      <h1>
+        I KNEW IT 😭❤️
+      </h1>
 
       <p>
-        Looks like you're officially stuck with me now. 😌
+        Looks like you're officially
+        stuck with me now. 😌
       </p>
 
       <p>
-        Welcome to the relationship, Popat. 🦜❤️
+        Welcome to the relationship,
+        Popat. 🦜❤️
       </p>
 
-      <button class="button primary next" onclick="nextPage()">
+      <button
+        class="button primary"
+        onclick="nextPage()"
+      >
         One last thing... 👀
       </button>
 
     </div>
+
   </section>
 
 
-  <!-- PAGE 7 - COPY MESSAGE -->
-  <section class="page" id="page7">
+
+  <!-- =========================
+       PAGE 7
+       COPY MESSAGE
+  ========================= -->
+
+  <section
+    class="page"
+    id="page7"
+  >
+
     <div class="content card">
 
-      <div class="emoji">💌</div>
-
-      <h2>One last thing... 👀</h2>
-
-      <p>
-        Since you've officially agreed to this
-        extremely questionable decision,
-        there's one thing left to do. 😌
-      </p>
-
-      <p>
-        <strong>Send your official acceptance. ❤️</strong>
-      </p>
-
-      <div class="copy-box" id="copyText">
-        Okay fine, I'm your girlfriend 😌❤️
+      <div class="emoji">
+        💌
       </div>
 
-      <button class="copy-button" onclick="copyMessage()">
+      <h2>
+        One last thing... 👀
+      </h2>
+
+      <p>
+
+        Since you've officially agreed
+        to this extremely questionable
+        decision, there's one thing
+        left to do. 😌
+
+      </p>
+
+      <p>
+
+        <strong>
+          Send your official acceptance. ❤️
+        </strong>
+
+      </p>
+
+
+      <div
+        class="copy-box"
+        id="copyText"
+      >
+
+        OK Jaanu, I'm your girlfriend 😌❤️
+
+      </div>
+
+
+      <button
+        class="copy-button"
+        onclick="copyMessage()"
+      >
+
         📋 Copy this
+
       </button>
 
-      <div class="copied" id="copiedMessage"></div>
+
+      <div
+        class="copied"
+        id="copiedMessage"
+      ></div>
+
 
       <p class="small">
-        Now's the time to send the reply. 👀<br>
-        Copy it and forward it wherever you want. ❤️
+
+        Copy it and forward it ASAP! ❤️
+
       </p>
 
     </div>
+
   </section>
+
 
 
   <script>
 
+    /* =========================
+       PAGE NAVIGATION
+    ========================= */
+
     let currentPage = 1;
-
-    const noMessages = [
-      "Are you sure? 🥺",
-      "Prisha. Think carefully. 😐",
-      "You're literally proving my point right now. 😭",
-      "Popat. 🦜 Don't do this to me.",
-      "You're really making me work for this huh? 😭",
-      "Okay fine... you just enjoy watching me suffer. 😔",
-      "At this point you're just flirting with me. 💀",
-      "Fine. You get one option now. 😌❤️"
-    ];
-
-    let noClicks = 0;
-    let yesScale = 1;
 
 
     function nextPage() {
 
-      document.getElementById("page" + currentPage)
+      document
+        .getElementById("page" + currentPage)
         .classList.remove("active");
+
 
       currentPage++;
 
-      document.getElementById("page" + currentPage)
+
+      document
+        .getElementById("page" + currentPage)
         .classList.add("active");
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
 
       createHearts(3);
     }
 
 
+
+    /* =========================
+       NO BUTTON
+    ========================= */
+
+    let noClicks = 0;
+
+    let yesScale = 1;
+
+
+    const noMessages = [
+
+      "Are you sure? 🥺",
+
+      "Prisha. Think carefully. 😐",
+
+      "You're literally proving my point right now. 😭",
+
+      "Popat. 🦜 Don't do this to me.",
+
+      "You're really making me work for this huh? 😭",
+
+      "Okay fine... you just enjoy watching me suffer. 😔",
+
+      "At this point you're just flirting with me. 💀",
+
+      "Fine. You get one option now. 😌❤️"
+
+    ];
+
+
+
     function sayNo() {
 
-      const yesBtn = document.getElementById("yesBtn");
-      const noBtn = document.getElementById("noBtn");
-      const message = document.getElementById("message");
+      const yesBtn =
+        document.getElementById("yesBtn");
+
+      const noBtn =
+        document.getElementById("noBtn");
+
+      const message =
+        document.getElementById("message");
+
+      const area =
+        document.getElementById("proposalArea");
+
 
       noClicks++;
 
-      const index = Math.min(
-        noClicks - 1,
-        noMessages.length - 1
-      );
 
-      message.textContent = noMessages[index];
+      /* Change message */
 
-      /*
-       * YES grows every time NO is clicked.
-       */
+      const index =
+        Math.min(
+          noClicks - 1,
+          noMessages.length - 1
+        );
+
+
+      message.textContent =
+        noMessages[index];
+
+
+      /* Make YES bigger */
+
       yesScale += 0.22;
 
+
       yesBtn.style.transform =
-        `scale(${yesScale})`;
+        `translate(-50%, -50%) scale(${yesScale})`;
+
 
       /*
-       * After enough NO clicks,
-       * the NO button disappears.
+       * Move NO around the screen.
+       *
+       * This prevents it from getting
+       * swallowed by the growing YES button.
        */
+
+      if (noClicks < 8) {
+
+        const areaWidth =
+          area.clientWidth;
+
+        const areaHeight =
+          area.clientHeight;
+
+
+        const buttonWidth =
+          noBtn.offsetWidth;
+
+        const buttonHeight =
+          noBtn.offsetHeight;
+
+
+        const maxX =
+          areaWidth - buttonWidth - 10;
+
+        const maxY =
+          areaHeight - buttonHeight - 10;
+
+
+        /*
+         * Keep the NO button away from
+         * the middle where YES lives.
+         */
+
+        let randomX;
+        let randomY;
+
+
+        do {
+
+          randomX =
+            10 +
+            Math.random() *
+            Math.max(maxX - 20, 20);
+
+
+          randomY =
+            10 +
+            Math.random() *
+            Math.max(maxY - 20, 20);
+
+        } while (
+
+          Math.abs(
+            randomX - areaWidth / 2
+          ) < 90
+
+          &&
+
+          Math.abs(
+            randomY - areaHeight / 2
+          ) < 90
+
+        );
+
+
+        noBtn.style.left =
+          randomX + "px";
+
+        noBtn.style.top =
+          randomY + "px";
+
+        noBtn.style.transform =
+          "none";
+
+      }
+
+
+      /*
+       * Eventually remove NO completely.
+       */
+
       if (noClicks >= 8) {
 
         noBtn.style.opacity = "0";
-        noBtn.style.pointerEvents = "none";
+
+        noBtn.style.pointerEvents =
+          "none";
+
 
         message.textContent =
           "Okay fine... I guess you only have one option now. 😌❤️";
 
+
         yesScale = 2.8;
 
+
         yesBtn.style.transform =
-          `scale(${yesScale})`;
+          `translate(-50%, -50%) scale(${yesScale})`;
+
       }
+
     }
 
+
+
+    /* =========================
+       YES BUTTON
+    ========================= */
 
     function sayYes() {
 
-      document.getElementById("page5")
+      document
+        .getElementById("page5")
         .classList.remove("active");
 
-      document.getElementById("page6")
+
+      document
+        .getElementById("page6")
         .classList.add("active");
 
+
+      currentPage = 6;
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+
       createConfetti();
+
       createHearts(20);
+
     }
 
+
+
+    /* =========================
+       COPY MESSAGE
+    ========================= */
 
     function copyMessage() {
 
       const text =
-        "Okay fine, I'm your girlfriend 😌❤️";
+        "OK Jaanu, I'm your girlfriend 😌❤️";
 
-      navigator.clipboard.writeText(text)
+
+      navigator.clipboard
+        .writeText(text)
+
         .then(() => {
 
-          document.getElementById("copiedMessage")
+          document
+            .getElementById("copiedMessage")
             .textContent =
-            "Copied! ❤️ Now go send it. 😌";
+            "Copied! ❤️ Now go send it ASAP! 😌";
 
         })
+
         .catch(() => {
 
           /*
            * Fallback for browsers where
            * clipboard access isn't available.
            */
+
           const textarea =
             document.createElement("textarea");
 
+
           textarea.value = text;
 
-          document.body.appendChild(textarea);
+
+          document
+            .body
+            .appendChild(textarea);
+
 
           textarea.select();
 
+
           document.execCommand("copy");
+
 
           textarea.remove();
 
-          document.getElementById("copiedMessage")
+
+          document
+            .getElementById("copiedMessage")
             .textContent =
-            "Copied! ❤️ Now go send it. 😌";
+            "Copied! ❤️ Now go send it ASAP! 😌";
+
         });
+
     }
 
 
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
     function createHearts(amount) {
 
-      const hearts = ["❤️", "💗", "💕", "💖", "💓"];
+      const hearts = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💓"
+      ];
 
-      for (let i = 0; i < amount; i++) {
+
+      for (
+        let i = 0;
+        i < amount;
+        i++
+      ) {
 
         const heart =
           document.createElement("div");
 
-        heart.className = "floating-heart";
+
+        heart.className =
+          "floating-heart";
+
 
         heart.textContent =
-          hearts[Math.floor(Math.random() * hearts.length)];
+          hearts[
+            Math.floor(
+              Math.random() *
+              hearts.length
+            )
+          ];
+
 
         heart.style.left =
           Math.random() * 100 + "vw";
 
+
         heart.style.animationDuration =
-          (4 + Math.random() * 4) + "s";
+          (
+            4 +
+            Math.random() * 4
+          ) + "s";
+
 
         heart.style.fontSize =
-          (15 + Math.random() * 18) + "px";
+          (
+            15 +
+            Math.random() * 18
+          ) + "px";
 
-        document.body.appendChild(heart);
+
+        document
+          .body
+          .appendChild(heart);
+
 
         setTimeout(() => {
+
           heart.remove();
+
         }, 8000);
+
       }
+
     }
 
+
+
+    /* =========================
+       CONFETTI
+    ========================= */
 
     function createConfetti() {
 
       const pieces = 120;
 
-      for (let i = 0; i < pieces; i++) {
+
+      for (
+        let i = 0;
+        i < pieces;
+        i++
+      ) {
 
         const confetti =
           document.createElement("div");
 
-        confetti.className = "confetti";
+
+        confetti.className =
+          "confetti";
+
 
         confetti.style.left =
           Math.random() * 100 + "vw";
 
+
         confetti.style.animationDelay =
           Math.random() * 1.5 + "s";
 
+
         confetti.style.animationDuration =
-          (2 + Math.random() * 2) + "s";
+          (
+            2 +
+            Math.random() * 2
+          ) + "s";
+
 
         confetti.style.background =
-          `hsl(${Math.random() * 360}, 80%, 65%)`;
+          `hsl(
+            ${Math.random() * 360},
+            80%,
+            65%
+          )`;
 
-        document.body.appendChild(confetti);
+
+        document
+          .body
+          .appendChild(confetti);
+
 
         setTimeout(() => {
+
           confetti.remove();
+
         }, 5000);
+
       }
+
     }
 
 
-    /*
-     * A few hearts periodically float
-     * in the background.
-     */
+
+    /* =========================
+       PERIODIC HEARTS
+    ========================= */
+
     setInterval(() => {
 
       if (currentPage !== 5) {
+
         createHearts(1);
+
       }
 
     }, 1800);
@@ -718,4 +1357,3 @@
 
 </body>
 </html>
-```
