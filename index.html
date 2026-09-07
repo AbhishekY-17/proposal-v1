@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <title>For Prisha ❤️</title>
+
 
   <style>
 
@@ -18,13 +21,21 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
       min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
       background:
         linear-gradient(
@@ -39,20 +50,25 @@
       overflow-x: hidden;
     }
 
+
     /* =========================
        PAGES
     ========================= */
 
     .page {
+
       display: none;
 
       width: 100%;
+
       min-height: 100vh;
       min-height: 100dvh;
 
-      padding: 70px 20px 50px;
+      padding:
+        70px 20px 60px;
 
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
@@ -60,38 +76,55 @@
       position: relative;
     }
 
+
     .page.active {
+
       display: flex;
-      animation: fadeIn 0.7s ease;
+
+      animation:
+        fadeIn 0.7s ease;
     }
 
+
     .content {
+
       width: min(92vw, 650px);
+
       position: relative;
+
       z-index: 2;
     }
 
+
     .card {
-      background: rgba(255, 255, 255, 0.78);
 
-      backdrop-filter: blur(12px);
+      background:
+        rgba(255, 255, 255, 0.78);
 
-      border: 1px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter:
+        blur(12px);
+
+      border:
+        1px solid rgba(255,255,255,0.9);
 
       border-radius: 30px;
 
       padding: 40px 28px;
 
       box-shadow:
-        0 15px 50px rgba(120, 50, 70, 0.12);
+        0 15px 50px
+        rgba(120, 50, 70, 0.12);
     }
+
 
     /* =========================
        TEXT
     ========================= */
 
     h1 {
-      font-size: clamp(2.2rem, 9vw, 4rem);
+
+      font-size:
+        clamp(2.2rem, 9vw, 4rem);
 
       line-height: 1.12;
 
@@ -100,8 +133,11 @@
       color: #b83b5e;
     }
 
+
     h2 {
-      font-size: clamp(1.8rem, 7vw, 3rem);
+
+      font-size:
+        clamp(1.8rem, 7vw, 3rem);
 
       line-height: 1.2;
 
@@ -110,15 +146,20 @@
       color: #b83b5e;
     }
 
+
     p {
-      font-size: clamp(1rem, 4.5vw, 1.3rem);
+
+      font-size:
+        clamp(1rem, 4.5vw, 1.3rem);
 
       line-height: 1.7;
 
       margin: 14px 0;
     }
 
+
     .small {
+
       font-size: 0.95rem;
 
       opacity: 0.75;
@@ -126,24 +167,30 @@
       line-height: 1.6;
     }
 
+
     .emoji {
+
       font-size: 4rem;
 
       margin-bottom: 22px;
 
-      animation: float 3s ease-in-out infinite;
+      animation:
+        float 3s ease-in-out infinite;
     }
 
+
     /* =========================
-       GENERAL BUTTON
+       GENERAL BUTTONS
     ========================= */
 
     .button {
+
       border: none;
 
       border-radius: 50px;
 
-      padding: 15px 30px;
+      padding:
+        15px 30px;
 
       font-size: 1.05rem;
 
@@ -160,46 +207,71 @@
       touch-action: manipulation;
     }
 
+
     .button:active {
-      transform: scale(0.94);
+
+      transform:
+        scale(0.94);
     }
 
+
     .primary {
+
       background: #d94f70;
 
       color: white;
 
       box-shadow:
-        0 8px 25px rgba(217, 79, 112, 0.3);
+        0 8px 25px
+        rgba(217, 79, 112, 0.3);
     }
 
+
     /* =========================
-       PROPOSAL
+       PROPOSAL AREA
     ========================= */
 
     .proposal-area {
 
       width: 100%;
 
-      height: 330px;
+      height: 360px;
 
       position: relative;
 
       margin-top: 25px;
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
+      overflow: hidden;
     }
 
-    .yes-btn,
-    .no-btn {
+
+    /* =========================
+       YES BUTTON
+    ========================= */
+
+    .yes-btn {
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%)
+        scale(1);
+
+      transform-origin: center;
 
       border: none;
 
       border-radius: 50px;
+
+      background: #d94f70;
+
+      color: white;
+
+      padding:
+        18px 32px;
 
       font-size: 1.1rem;
 
@@ -207,62 +279,74 @@
 
       cursor: pointer;
 
-      touch-action: manipulation;
-
-      position: absolute;
-
-      transition:
-        transform 0.35s ease,
-        left 0.35s ease,
-        top 0.35s ease,
-        opacity 0.35s ease;
-    }
-
-    .yes-btn {
-
-      background: #d94f70;
-
-      color: white;
-
-      padding: 18px 32px;
-
-      left: 28%;
-
-      top: 50%;
-
-      transform:
-        translate(-50%, -50%)
-        scale(1);
+      white-space: nowrap;
 
       box-shadow:
-        0 10px 30px rgba(217, 79, 112, 0.3);
+        0 10px 30px
+        rgba(217, 79, 112, 0.3);
 
       z-index: 5;
+
+      transition:
+        transform 0.35s ease;
     }
+
+
+    /* =========================
+       NO BUTTON
+    ========================= */
 
     .no-btn {
 
-      background: white;
+      position: absolute;
 
-      color: #555;
-
-      border: 2px solid #ddd;
-
-      padding: 16px 28px;
-
-      left: 72%;
-
+      left: 75%;
       top: 50%;
 
       transform:
         translate(-50%, -50%);
 
+      width: 120px;
+
+      height: 64px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 5px;
+
+      border-radius: 50px;
+
+      background: white;
+
+      color: #555;
+
+      border:
+        2px solid #ddd;
+
+      font-size: 1.05rem;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      white-space: nowrap;
+
       z-index: 10;
+
+      transition:
+        left 0.35s ease,
+        top 0.35s ease,
+        opacity 0.35s ease;
     }
+
 
     .message {
 
-      min-height: 40px;
+      min-height: 45px;
 
       margin-top: 5px;
 
@@ -273,19 +357,22 @@
       font-size: 1.05rem;
     }
 
+
     /* =========================
        COPY MESSAGE
     ========================= */
 
     .copy-box {
 
-      margin: 25px auto;
+      margin:
+        25px auto;
 
       max-width: 500px;
 
       background: white;
 
-      border: 2px dashed #e9a6b8;
+      border:
+        2px dashed #e9a6b8;
 
       border-radius: 18px;
 
@@ -298,6 +385,7 @@
       color: #b83b5e;
     }
 
+
     .copy-button {
 
       background: #d94f70;
@@ -308,7 +396,8 @@
 
       border-radius: 50px;
 
-      padding: 14px 25px;
+      padding:
+        14px 25px;
 
       font-size: 1rem;
 
@@ -317,8 +406,8 @@
       cursor: pointer;
 
       touch-action: manipulation;
-
     }
+
 
     .copied {
 
@@ -330,6 +419,7 @@
 
       min-height: 25px;
     }
+
 
     /* =========================
        FLOATING HEARTS
@@ -345,12 +435,14 @@
 
       pointer-events: none;
 
-      animation: rise linear forwards;
+      animation:
+        rise linear forwards;
 
       opacity: 0.7;
 
       z-index: 1;
     }
+
 
     /* =========================
        CONFETTI
@@ -374,6 +466,7 @@
         confettiFall 3s linear forwards;
     }
 
+
     /* =========================
        ANIMATIONS
     ========================= */
@@ -381,6 +474,7 @@
     @keyframes fadeIn {
 
       from {
+
         opacity: 0;
 
         transform:
@@ -388,6 +482,7 @@
       }
 
       to {
+
         opacity: 1;
 
         transform:
@@ -395,19 +490,23 @@
       }
     }
 
+
     @keyframes float {
 
       0%,
       100% {
+
         transform:
           translateY(0);
       }
 
       50% {
+
         transform:
           translateY(-10px);
       }
     }
+
 
     @keyframes rise {
 
@@ -421,6 +520,7 @@
       }
     }
 
+
     @keyframes confettiFall {
 
       to {
@@ -433,6 +533,7 @@
       }
     }
 
+
     /* =========================
        MOBILE
     ========================= */
@@ -442,8 +543,9 @@
       .page {
 
         padding:
-          60px 18px 45px;
+          60px 18px 50px;
       }
+
 
       .card {
 
@@ -451,43 +553,53 @@
           32px 20px;
       }
 
+
       .proposal-area {
 
-        height: 360px;
+        height: 380px;
       }
+
 
       .yes-btn {
 
-        left: 35%;
-
         padding:
-          16px 27px;
+          17px 28px;
+
+        font-size:
+          1.05rem;
       }
+
 
       .no-btn {
 
-        left: 72%;
+        width: 115px;
 
-        padding:
-          14px 24px;
+        height: 60px;
+
+        font-size:
+          1rem;
       }
+
 
       p {
 
-        line-height: 1.65;
+        line-height:
+          1.65;
       }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 1
-  ========================= -->
+  ================================== -->
 
   <section
     class="page active"
@@ -512,7 +624,8 @@
 
         And before you ask...<br>
 
-        No, you can't make fun of me for this. 🫣
+        No, you can't make fun of me
+        for this. 🫣
 
       </p>
 
@@ -520,7 +633,9 @@
         class="button primary"
         onclick="nextPage()"
       >
+
         Okay, show me → ❤️
+
       </button>
 
     </div>
@@ -529,9 +644,9 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 2
-  ========================= -->
+  ================================== -->
 
   <section
     class="page"
@@ -549,14 +664,18 @@
       </h2>
 
       <p>
+
         We met while randomly playing
         <strong>BGMI</strong>
         on a random evening.
+
       </p>
 
       <p>
+
         Somehow, three months later,
         we're here. 😭
+
       </p>
 
       <p>
@@ -578,9 +697,9 @@
 
       <p class="small">
 
-        Yes, Popat, I'm being serious
+        Yes, Prisha, I'm being serious
         as I've always been with the
-        previous "accidental" confessions. 🦜
+        previous "accidental" confessions. 🫣
 
       </p>
 
@@ -588,7 +707,9 @@
         class="button primary"
         onclick="nextPage()"
       >
+
         Continue 🫣
+
       </button>
 
     </div>
@@ -597,9 +718,10 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 3
-  ========================= -->
+       APPRECIATION
+  ================================== -->
 
   <section
     class="page"
@@ -609,50 +731,64 @@
     <div class="content card">
 
       <div class="emoji">
-        😭
+        🌸
       </div>
 
       <h2>
-        And honestly....
+        There's something else...
       </h2>
 
       <p>
 
-        I survived your roasting😭.
+        I really like how you are.
 
       </p>
 
       <p>
 
-        Blessing you with my divine
-        presence daily😇.
+        You're funny,<br>
+        you're goofy,<br>
+        you're ridiculously good at roasting me... 😭
 
       </p>
 
       <p>
 
-        So clearly...
+        You can yap for hours,
+        and somehow I still want to hear more. 🫣
+
+      </p>
+
+      <p>
+
+        I love your energy,
+        your sarcasm,
+        and the way you somehow
+        make even the most random
+        conversations fun.
+
+      </p>
+
+      <p>
+
+        And honestly...
 
       </p>
 
       <h2>
 
-        I deserve something in return. 😌
+        I really like having you
+        in my life. ❤️
 
       </h2>
-
-      <p class="small">
-
-        Also, being called "Dudh Wale"
-        for being a Yadav is still criminal btw. 😭
-
-      </p>
 
       <button
         class="button primary"
         onclick="nextPage()"
       >
+
         Okay... 👀
+
       </button>
 
     </div>
@@ -661,9 +797,10 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 4
-  ========================= -->
+       SERIOUS CONFESSION
+  ================================== -->
 
   <section
     class="page"
@@ -681,13 +818,17 @@
       </p>
 
       <p>
+
         You've become someone
         I genuinely care about.
+
       </p>
 
       <p>
+
         And I've wanted to ask you
         this properly for a while.
+
       </p>
 
       <p>
@@ -700,14 +841,18 @@
       </p>
 
       <p>
+
         Just me asking you.
+
       </p>
 
       <button
         class="button primary"
         onclick="nextPage()"
       >
+
         One last question... 🫣
+
       </button>
 
     </div>
@@ -716,10 +861,10 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 5
        PROPOSAL
-  ========================= -->
+  ================================== -->
 
   <section
     class="page"
@@ -751,7 +896,9 @@
           id="yesBtn"
           onclick="sayYes()"
         >
+
           YES 🥰
+
         </button>
 
 
@@ -760,7 +907,9 @@
           id="noBtn"
           onclick="sayNo()"
         >
+
           NO 🙄
+
         </button>
 
       </div>
@@ -777,10 +926,10 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 6
        YES
-  ========================= -->
+  ================================== -->
 
   <section
     class="page"
@@ -798,20 +947,26 @@
       </h1>
 
       <p>
+
         Looks like you're officially
         stuck with me now. 😌
+
       </p>
 
       <p>
+
         Welcome to the relationship,
-        Popat. 🦜❤️
+        Prisha. ❤️
+
       </p>
 
       <button
         class="button primary"
         onclick="nextPage()"
       >
+
         One last thing... 👀
+
       </button>
 
     </div>
@@ -820,10 +975,10 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================
        PAGE 7
        COPY MESSAGE
-  ========================= -->
+  ================================== -->
 
   <section
     class="page"
@@ -898,9 +1053,10 @@
 
   <script>
 
-    /* =========================
+
+    /* ==================================
        PAGE NAVIGATION
-    ========================= */
+    ================================== */
 
     let currentPage = 1;
 
@@ -908,7 +1064,9 @@
     function nextPage() {
 
       document
-        .getElementById("page" + currentPage)
+        .getElementById(
+          "page" + currentPage
+        )
         .classList.remove("active");
 
 
@@ -916,7 +1074,9 @@
 
 
       document
-        .getElementById("page" + currentPage)
+        .getElementById(
+          "page" + currentPage
+        )
         .classList.add("active");
 
 
@@ -931,9 +1091,9 @@
 
 
 
-    /* =========================
+    /* ==================================
        NO BUTTON
-    ========================= */
+    ================================== */
 
     let noClicks = 0;
 
@@ -948,15 +1108,43 @@
 
       "You're literally proving my point right now. 😭",
 
-      "Popat. 🦜 Don't do this to me.",
+      "Really? You chose NO? 🥲",
 
       "You're really making me work for this huh? 😭",
 
-      "Okay fine... you just enjoy watching me suffer. 😔",
+      "Okay... I see how it is. 😔",
 
-      "At this point you're just flirting with me. 💀",
+      "At this point you're just flirting with me. 👀",
 
       "Fine. You get one option now. 😌❤️"
+
+    ];
+
+
+    /*
+     * Safe positions for the NO button.
+     *
+     * These are deliberately around the
+     * edges of the proposal area so that
+     * the growing YES button doesn't
+     * swallow it.
+     */
+
+    const noPositions = [
+
+      { left: "78%", top: "18%" },
+
+      { left: "22%", top: "20%" },
+
+      { left: "78%", top: "82%" },
+
+      { left: "20%", top: "82%" },
+
+      { left: "82%", top: "42%" },
+
+      { left: "18%", top: "48%" },
+
+      { left: "78%", top: "70%" }
 
     ];
 
@@ -965,22 +1153,29 @@
     function sayNo() {
 
       const yesBtn =
-        document.getElementById("yesBtn");
+        document.getElementById(
+          "yesBtn"
+        );
+
 
       const noBtn =
-        document.getElementById("noBtn");
+        document.getElementById(
+          "noBtn"
+        );
+
 
       const message =
-        document.getElementById("message");
-
-      const area =
-        document.getElementById("proposalArea");
+        document.getElementById(
+          "message"
+        );
 
 
       noClicks++;
 
 
-      /* Change message */
+      /* ------------------------------
+         CHANGE MESSAGE
+      ------------------------------ */
 
       const index =
         Math.min(
@@ -993,97 +1188,50 @@
         noMessages[index];
 
 
-      /* Make YES bigger */
+      /* ------------------------------
+         GROW YES
+      ------------------------------ */
 
       yesScale += 0.22;
 
 
       yesBtn.style.transform =
-        `translate(-50%, -50%) scale(${yesScale})`;
+        `translate(-50%, -50%)
+         scale(${yesScale})`;
 
 
-      /*
-       * Move NO around the screen.
-       *
-       * This prevents it from getting
-       * swallowed by the growing YES button.
-       */
+
+      /* ------------------------------
+         MOVE NO
+      ------------------------------ */
 
       if (noClicks < 8) {
 
-        const areaWidth =
-          area.clientWidth;
-
-        const areaHeight =
-          area.clientHeight;
-
-
-        const buttonWidth =
-          noBtn.offsetWidth;
-
-        const buttonHeight =
-          noBtn.offsetHeight;
-
-
-        const maxX =
-          areaWidth - buttonWidth - 10;
-
-        const maxY =
-          areaHeight - buttonHeight - 10;
-
-
-        /*
-         * Keep the NO button away from
-         * the middle where YES lives.
-         */
-
-        let randomX;
-        let randomY;
-
-
-        do {
-
-          randomX =
-            10 +
-            Math.random() *
-            Math.max(maxX - 20, 20);
-
-
-          randomY =
-            10 +
-            Math.random() *
-            Math.max(maxY - 20, 20);
-
-        } while (
-
-          Math.abs(
-            randomX - areaWidth / 2
-          ) < 90
-
-          &&
-
-          Math.abs(
-            randomY - areaHeight / 2
-          ) < 90
-
-        );
+        const position =
+          noPositions[
+            (noClicks - 1)
+            % noPositions.length
+          ];
 
 
         noBtn.style.left =
-          randomX + "px";
+          position.left;
+
 
         noBtn.style.top =
-          randomY + "px";
+          position.top;
+
 
         noBtn.style.transform =
-          "none";
+          "translate(-50%, -50%)";
 
       }
 
 
-      /*
-       * Eventually remove NO completely.
-       */
+
+      /* ------------------------------
+         REMOVE NO
+      ------------------------------ */
 
       if (noClicks >= 8) {
 
@@ -1101,7 +1249,8 @@
 
 
         yesBtn.style.transform =
-          `translate(-50%, -50%) scale(${yesScale})`;
+          `translate(-50%, -50%)
+           scale(${yesScale})`;
 
       }
 
@@ -1109,9 +1258,9 @@
 
 
 
-    /* =========================
+    /* ==================================
        YES BUTTON
-    ========================= */
+    ================================== */
 
     function sayYes() {
 
@@ -1142,9 +1291,9 @@
 
 
 
-    /* =========================
+    /* ==================================
        COPY MESSAGE
-    ========================= */
+    ================================== */
 
     function copyMessage() {
 
@@ -1158,7 +1307,9 @@
         .then(() => {
 
           document
-            .getElementById("copiedMessage")
+            .getElementById(
+              "copiedMessage"
+            )
             .textContent =
             "Copied! ❤️ Now go send it ASAP! 😌";
 
@@ -1166,13 +1317,10 @@
 
         .catch(() => {
 
-          /*
-           * Fallback for browsers where
-           * clipboard access isn't available.
-           */
-
           const textarea =
-            document.createElement("textarea");
+            document.createElement(
+              "textarea"
+            );
 
 
           textarea.value = text;
@@ -1193,7 +1341,9 @@
 
 
           document
-            .getElementById("copiedMessage")
+            .getElementById(
+              "copiedMessage"
+            )
             .textContent =
             "Copied! ❤️ Now go send it ASAP! 😌";
 
@@ -1203,18 +1353,20 @@
 
 
 
-    /* =========================
+    /* ==================================
        FLOATING HEARTS
-    ========================= */
+    ================================== */
 
     function createHearts(amount) {
 
       const hearts = [
+
         "❤️",
         "💗",
         "💕",
         "💖",
         "💓"
+
       ];
 
 
@@ -1225,7 +1377,9 @@
       ) {
 
         const heart =
-          document.createElement("div");
+          document.createElement(
+            "div"
+          );
 
 
         heart.className =
@@ -1242,7 +1396,8 @@
 
 
         heart.style.left =
-          Math.random() * 100 + "vw";
+          Math.random() * 100 +
+          "vw";
 
 
         heart.style.animationDuration =
@@ -1276,9 +1431,9 @@
 
 
 
-    /* =========================
+    /* ==================================
        CONFETTI
-    ========================= */
+    ================================== */
 
     function createConfetti() {
 
@@ -1292,7 +1447,9 @@
       ) {
 
         const confetti =
-          document.createElement("div");
+          document.createElement(
+            "div"
+          );
 
 
         confetti.className =
@@ -1300,11 +1457,13 @@
 
 
         confetti.style.left =
-          Math.random() * 100 + "vw";
+          Math.random() * 100 +
+          "vw";
 
 
         confetti.style.animationDelay =
-          Math.random() * 1.5 + "s";
+          Math.random() * 1.5 +
+          "s";
 
 
         confetti.style.animationDuration =
@@ -1339,9 +1498,9 @@
 
 
 
-    /* =========================
+    /* ==================================
        PERIODIC HEARTS
-    ========================= */
+    ================================== */
 
     setInterval(() => {
 
@@ -1353,7 +1512,9 @@
 
     }, 1800);
 
+
   </script>
 
 </body>
+
 </html>
